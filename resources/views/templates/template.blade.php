@@ -191,10 +191,18 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('home')}}" class="nav-link">
+                            <a href="{{route('transactions.index')}}" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Transaction
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('transactions.index')}}" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Product
                                 </p>
                             </a>
                         </li>

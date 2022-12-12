@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Transaction\TransactionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,4 +26,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/user-setting', [App\Http\Controllers\setting\UserController::class, 'index'])->name('user-setting');
 Route::get('/user-setting/import', [App\Http\Controllers\setting\UserController::class, 'import'])->name('user-setting-import');
+
+// Transaction
+// Route::prefix('transaction')->group(function () {
+    // Route::resource('/transaction', [App\Http\Controllers\Transaction\TransactionController::class]);
+// });
+Route::resource('transactions', TransactionController::class);
 
