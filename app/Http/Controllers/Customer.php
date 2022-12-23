@@ -1,21 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\cs;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class Customer extends Controller
 {
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        return view('index');
-    }
-
-    public function landingpage()
-    {
-        return view('visitor.index');
+        //
     }
 
     /**
@@ -42,10 +41,10 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\cs  $cs
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(cs $cs)
     {
         //
     }
@@ -53,10 +52,10 @@ class AdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\cs  $cs
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(cs $cs)
     {
         //
     }
@@ -65,10 +64,10 @@ class AdminController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\cs  $cs
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, cs $cs)
     {
         //
     }
@@ -76,10 +75,10 @@ class AdminController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\cs  $cs
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(cs $cs)
     {
         //
     }

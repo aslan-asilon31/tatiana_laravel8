@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Transaction\TransactionController;
+use App\Http\Controllers\Admin\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,16 +15,22 @@ use App\Http\Controllers\Transaction\TransactionController;
 |
 */
 
+/* 
 Route::get('/', function () {
-    return view('templates/template_front');
+    return view('templates/frontend');
 });
+*/
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//back office
+// frontend
 
+Route::get('/', [AdminController::class, 'landingpage']);
+
+
+// backend
 Route::get('/user-setting', [App\Http\Controllers\setting\UserController::class, 'index'])->name('user-setting');
 Route::get('/user-setting/import', [App\Http\Controllers\setting\UserController::class, 'import'])->name('user-setting-import');
 
